@@ -27,12 +27,13 @@ const ProductDetails = () => {
 
     const UpdateProductHandler = (product) => {
         dispatch(asyncUpdateProduct(id,product));
+        navigate("/");
 
     };
 
     const DeleteHandler = () => {
       dispatch(asyncDeleteProduct(id));
-      navigate("/products");
+      navigate("/");
     }
 
 
@@ -87,7 +88,8 @@ const ProductDetails = () => {
         placeholder="category"
         />
         <div className="flex gap-4">
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+          <button 
+          className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
             Update Product
           </button>
           <button 
